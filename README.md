@@ -4,18 +4,23 @@
 Install Neovim this from https://github.com/neovim/neovim
 
 Then install NvChad this way. 
-```bash
+```sh
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 ```
 After which you should follow the remaining instructions at
 https://nvchad.com/docs/quickstart/install
 
-Then carefully assess the files in this dotfiles repo for any version/compatibility changes with your new NvChad installation before pasting each one's content accordingly.
+Then carefully assess the files in this dotfiles repo for any version/compatibility changes with your new NvChad installation before pasting each one's content accordingly. 
+Or you can go ahead and simply clone this repo. Then replace your `~/.config/nvim` contents with it if you are sure all configurations check out.
 
 ## Set aliases in .bashrc or .zshrc
+```sh
+
 alias vim='clear && nvim'
 alias nvim='~/nvim-linux64/bin/nvim'
 
+
+```
 
 ## POPULAR SHORTCUTS AS SEEN IN VS CODE
 - Go to import definition - gd
