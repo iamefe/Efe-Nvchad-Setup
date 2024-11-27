@@ -38,10 +38,10 @@ alias nvim='~/nvim-linux64/bin/nvim'
 - Close Nvim - Leader Q
 - Close tab (buffer) - Leader X
 - IN YOUR FILE BROWSER
-        - h to go to the parent directory (like going cd ../)
-        - c to create a new file
-        - r to rename a file
-        - s to select a file and m to move it
-        - s to select a file and d to delete it with confirmation
+        -   h to go to the parent directory (like going cd ../)
+        -   c to create a new file
+        -   r to rename a file
+        -   s to select a file and m to move it
+        -   s to select a file and d to delete it with confirmation
 - Indent multiple lines in visual mode: `>` or `<`
 - Select matching tag: `%`
