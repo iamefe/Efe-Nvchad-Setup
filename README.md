@@ -37,7 +37,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 As of Nov. 29. 2024, all that you need to do is install [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) globally. No formatting configuration needed. You should also install and setup the Svelt LSP too.
 
 ```sh
-yarn add prettier-plugin-svelte
+yarn global add prettier-plugin-svelte
 
 ```
 
