@@ -10,7 +10,7 @@ local capabilities = nvlsp.capabilities
 local lspconfig = require "lspconfig"
 
 -- Run :MasonInstallAll to automatically install all of these or new servers you add.
-local servers = { "html", "cssls", "pyright", "clangd", "eslint", "jsonls", "sqlls" }
+local servers = { "html", "cssls", "pyright", "clangd", "eslint", "jsonls", "sqlls", "svelte" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -134,4 +134,3 @@ lspconfig.lua_ls.setup {
     },
   },
 }
-

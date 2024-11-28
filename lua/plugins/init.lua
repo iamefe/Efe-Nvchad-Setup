@@ -93,7 +93,9 @@ return {
           -- custom mappings
           vim.keymap.set("n", "t", api.node.open.tab, opts "Tab")
           vim.cmd [[
-              :hi NvimTreeNormal guibg=#011627
+              :hi NvimTreeNormal guibg=#011627,
+              :hi NvimTreeNormalFloat guibg=#011627,
+              :hi NvimTreeNormalNC guibg=#011627
             ]]
         end,
 
