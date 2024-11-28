@@ -1,19 +1,23 @@
 # Notes
 
 ## For new Nvchad installation
+
 Install Neovim this from https://github.com/neovim/neovim
 
-Then install NvChad this way. 
+Then install NvChad this way.
+
 ```sh
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 ```
+
 After which you should follow the remaining instructions at
 https://nvchad.com/docs/quickstart/install
 
-Then carefully assess the files in this dotfiles repo for any version/compatibility changes with your new NvChad installation before pasting each one's content accordingly. 
+Then carefully assess the files in this dotfiles repo for any version/compatibility changes with your new NvChad installation before pasting each one's content accordingly.
 Or you can go ahead and simply clone this repo. Then replace your `~/.config/nvim` contents with it if you are sure all configurations check out.
 
 ## Set aliases in .bashrc or .zshrc
+
 ```sh
 
 alias vim='clear && nvim'
@@ -22,7 +26,14 @@ alias nvim='~/nvim-linux64/bin/nvim'
 
 ```
 
+## Language servers
+
+These are the specific configuration names for the servers you intend to use here
+For automatic installation and custom configuration (optional) place them in configs/lspconfig.lua and then run `:MasonInstallAll`.
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+
 ## POPULAR SHORTCUTS AS SEEN IN VS CODE
+
 - Go to import definition - gd
 - Move line up or down - alt + k or j
 - Duplicate line down - Leader d (n mode)
@@ -36,8 +47,8 @@ alias nvim='~/nvim-linux64/bin/nvim'
 - Toggle line numbers - Leader n
 - Floating file browser with the current path - sf (normal mode)
 - Find word in current buffer - ;f or Leader fz (this uses Telescope).
-- Find word in across current root directory -  Leader fw.
-- Find file in across current root directory -  ;r.
+- Find word in across current root directory - Leader fw.
+- Find file in across current root directory - ;r.
 - Super powers - :Telescope
 - Using Telescope to see all keymaps - Leader km or :Telescope keymaps
 - Lazy - Leader l
@@ -45,12 +56,12 @@ alias nvim='~/nvim-linux64/bin/nvim'
 - Close Nvim - Leader Q
 - Close tab (buffer) - Leader X
 - IN YOUR FILE BROWSER
-  -   h to go to the parent directory (like going cd ../)
-  -   c to create a new file
-  -   r to rename a file
-  -   s to select a file and m to move it
-  -   s to select a file and d to delete it with confirmation
+  - h to go to the parent directory (like going cd ../)
+  - c to create a new file
+  - r to rename a file
+  - s to select a file and m to move it
+  - s to select a file and d to delete it with confirmation
 - Indent multiple lines in visual mode: `>` or `<`
 - Select matching tag: `%`
 - Nvim file explorer (Nvimtree) shortcuts - https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
-or type :h nvim-tree-highlight in Nvim
+  or type :h nvim-tree-highlight in Nvim

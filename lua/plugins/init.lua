@@ -16,7 +16,6 @@ return {
   --   lazy = false,
   -- };
 
-  
   -- Search/replace in multiple files
   {
     "nvim-pack/nvim-spectre",
@@ -93,11 +92,9 @@ return {
 
           -- custom mappings
           vim.keymap.set("n", "t", api.node.open.tab, opts "Tab")
-          vim.cmd(
-            [[
+          vim.cmd [[
               :hi NvimTreeNormal guibg=#011627
             ]]
-          )
         end,
 
         disable_netrw = true,
@@ -196,8 +193,40 @@ return {
     event = "BufWritePre",
     config = function()
       require "configs.conform"
+      --       require("conform").setup({
+      --
+      --         formatters_by_ft = {
+      --           lua = { "stylua" },
+      --           -- Conform will run multiple formatters sequentially
+      --           python = { "isort", "black" },
+      --           -- You can customize some of the format options for the filetype (:help conform.format)
+      --           rust = { "rustfmt", lsp_format = "fallback" },
+      --           -- Conform will run the first available formatter
+      --           javascript = { "prettierd", "prettier", stop_after_first = true },
+      --           typescript = { "prettierd", "prettier", stop_after_first = true },
+      --         },
+      -- format_on_save = {
+      --   -- These options will be passed to conform.format()
+      --   timeout_ms = 500,
+      --   lsp_format = "fallback",
+      -- },
+      --
+      --       vim.api.nvim_create_autocmd("BufWritePre", {
+      -- pattern = "*",
+      -- callback = function(args)
+      --   require("conform").format({ bufnr = args.buf })
+      -- end,
+      -- })
+      -- })
     end,
   },
+  -- {
+  --   "stevearc/conform.nvim",
+  --   event = "BufWritePre",
+  --   config = function()
+  --     require "configs.conform"
+  --   end,
+  -- },
 
   -- Incremental rename
   {
@@ -251,8 +280,8 @@ return {
     },
     -- optional for floating window border decoration
     dependencies = {
-      "nvim-lua/plenary.nvim" 
-      },
+      "nvim-lua/plenary.nvim",
+    },
   },
 
   -- Filename
@@ -419,24 +448,10 @@ return {
     end,
   },
 
-  -- Install language servers
+  -- Install Mason
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "html-lsp",
-        "css-lsp",
-        "prettier",
-        "typescript-language-server",
-        "pyright",
-        "clangd",
-        "eslint-lsp",
-        "rust-analyzer",
-        "json-lsp",
-      },
-    },
+    opts = {},
   },
 
   -- Syntax highlighting
@@ -488,7 +503,7 @@ return {
       },
       "nvim-telescope/telescope-file-browser.nvim",
       "folke/noice.nvim",
-      -- "stevearc/dressing.nvim", 
+      -- "stevearc/dressing.nvim",
     },
     keys = {
       {
@@ -654,12 +669,11 @@ return {
       require("telescope").load_extension "fzf"
       require("telescope").load_extension "file_browser"
       require("telescope").load_extension "noice"
-      
-      -- Remove title background and change title text color to white
-      vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = "NONE", fg = "white" }) 
-      vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = "NONE", fg = "white" }) 
-      vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = "NONE",  fg = "white" })
-    end,
 
+      -- Remove title background and change title text color to white
+      vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = "NONE", fg = "white" })
+      vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = "NONE", fg = "white" })
+      vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = "NONE", fg = "white" })
+    end,
   },
 }
