@@ -35,7 +35,9 @@ alias nvim='~/nvim-linux64/bin/nvim'
 - Toggle relative numbers - Leader rn
 - Toggle line numbers - Leader n
 - Floating file browser with the current path - sf (normal mode)
-- Find in current buffer - Leader fz (this uses Telescope).
+- Find word in current buffer - ;f or Leader fz (this uses Telescope).
+- Find word in across current root directory -  Leader fw.
+- Find file in across current root directory -  ;r.
 - Super powers - :Telescope
 - Using Telescope to see all keymaps - Leader km or :Telescope keymaps
 - Lazy - Leader l
