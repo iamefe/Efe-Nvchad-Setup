@@ -28,20 +28,21 @@ alias nvim='~/nvim-linux64/bin/nvim'
 
 ## Language servers
 
-These are the specific configuration names for the servers you intend to use here
-For automatic installation and custom configuration (optional) place them in configs/lspconfig.lua and then run `:MasonInstallAll`.
+These are the specific configuration names for the servers you intend to use here:
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+
+For automatic installation and custom configuration (optional) place any of them you want in configs/lspconfig.lua and then run `:MasonInstallAll`.
 
 ## Svelte format on save configuration
 
-As of Nov. 29. 2024, all that you need to do is install [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) globally. No formatting configuration needed. You should also install and setup the Svelt LSP too.
+As of Nov. 29. 2024, all you need to do is install [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) globally. No formatting configuration needed. You should also install and setup the Svelt LSP too.
 
 ```sh
 yarn global add prettier-plugin-svelte
 
 ```
 
-## POPULAR SHORTCUTS AS SEEN IN VS CODE
+## POPULAR SHORTCUTS
 
 - Go to import definition - gd
 - Move line up or down - alt + k or j
@@ -72,5 +73,6 @@ yarn global add prettier-plugin-svelte
   - s to select a file and d to delete it with confirmation
 - Indent multiple lines in visual mode: `>` or `<`
 - Select matching tag: `%`
-- Nvim file explorer (Nvimtree) shortcuts - https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
+- Nvim file explorer (Nvimtree) shortcuts -
+  https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
   or type :h nvim-tree-highlight in Nvim
