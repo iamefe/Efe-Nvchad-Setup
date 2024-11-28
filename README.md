@@ -50,3 +50,5 @@ alias nvim='~/nvim-linux64/bin/nvim'
   -   s to select a file and d to delete it with confirmation
 - Indent multiple lines in visual mode: `>` or `<`
 - Select matching tag: `%`
+- Nvim file explorer (Nvimtree) shortcuts - https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
+or type :h nvim-tree-highlight in Nvim

@@ -93,6 +93,11 @@ return {
 
           -- custom mappings
           vim.keymap.set("n", "t", api.node.open.tab, opts "Tab")
+          vim.cmd(
+            [[
+              :hi NvimTreeNormal guibg=#011627
+            ]]
+          )
         end,
 
         disable_netrw = true,
@@ -161,7 +166,7 @@ return {
                 renamed = "➜",
                 untracked = "★",
                 deleted = "",
-                ignored = "❆",
+                ignored = "❆", -- Customized by Efe
               },
             },
           },
