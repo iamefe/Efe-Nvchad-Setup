@@ -22,22 +22,21 @@ map("n", "-", "<C-x>")
 -- Save in normal, insert and visual modes
 map({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR><Escape>", opts)
 
--- Quit
+-- Quit (prompts you to save)
 map("n", "<Leader>q", ":quit<Return>", opts)
-map("n", "<Leader>Q", ":qa<Return>", opts)
+
+-- Quit (discards unsaved changes)
+map("n", "<Leader>Q", ":qa!<Return>", opts)
 
 -- Delete tab (ie. buffer)
 map("n", "<Leader>X", ":bd<CR>", opts)
 
--- SplitTelescope keymaps window
+-- Split window
 map("n", "<Leader>ss", ":split<Return>", opts)
 map("n", "<Leader>sv", ":vsplit<Return>", opts)
 
 -- Telescope emoji
 map("n", "<Leader>e", ":Telescope emoji<Return>", opts)
-
--- NvimTree (No longer working)
--- map("n", "<Leader>F", ":NvimTreeFindFile<Return>", opts)
 
 -- Lsp Hover Doc Scrolling
 map({ "n", "i", "s" }, "<c-f>", function()
@@ -62,6 +61,9 @@ map("n", "<Leader>l", ":Lazy<CR>", opts)
 
 -- Telescope keymaps
 map("n", "<Leader>km", ":Telescope keymaps<CR>", { noremap = true, silent = true })
+
+-- Open Telescope
+map("n", "<Leader>t", ":Telescope<CR>", { noremap = true, silent = true })
 
 -- Duplicate the current line in normal mode
 map("n", "<Leader>d", "yyp", opts)
@@ -105,11 +107,12 @@ autocmd("User", {
 -- Create the custom command to call the autocmd
 vim.api.nvim_create_user_command("OpenNvChadConfig", function()
   vim.api.nvim_exec_autocmds("User", { pattern = "OpenNvChadConfig" })
-end, 
-  { nargs = 0 }
-)
+end, { nargs = 0 })
 
 -- Set the keymap to call the custom command
-vim.api.nvim_set_keymap("n", "<Leader>sc", ":OpenNvChadConfig<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>sc", ":OpenNvChadConfig<CR>", opts)
 
 -- END: Custom command for opening NvChad config directory
+
+-- Print working directory
+map("n", ";p", ":pwd<CR>", opts)

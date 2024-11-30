@@ -52,7 +52,7 @@ local function setup_file_browser()
     hidden = true,
     grouped = true,
     previewer = false,
-    initial_mode = "normal",
+    initial_mode = "insert",
     layout_config = { height = 24 },
   }
 end
@@ -60,7 +60,9 @@ end
 -- Automatically call the setup function on VimEnter, but only if no files or arguments are provided
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    -- Check if no files or arguments are given
+    -- Check if no files or arguments are given ie. the if vim.fn.argc() == 0 condition
+    -- ensures the file browser is only opened when Neovim starts without arguments
+    -- (e.g., no vim .bashrc or vim some_directory).
     if vim.fn.argc() == 0 then
       setup_file_browser()
     end

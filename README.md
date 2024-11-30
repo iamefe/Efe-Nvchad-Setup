@@ -44,7 +44,12 @@ yarn global add prettier-plugin-svelte
 
 ## POPULAR SHORTCUTS
 
-- Cut a line or delete a line - dd
+- Collapse all (Nvimtree) - `W`
+- Copy absolute path - `gy`
+- Up (Nvimtree) - `-`
+- Change working directory for Telescope and Nvimtree - ;cd <directory>CR
+- Make selected Nvimtree directory the working directory - `C-]`
+- Cut a line or delete a line - dd or <DELETE>
 - Cut or delete a block - place your cursor at the start of the line and then press d(number of lines)ENTER
 - Go to import definition - gd
 - Move line up or down - alt + k or j
@@ -52,8 +57,7 @@ yarn global add prettier-plugin-svelte
 - Undo and redo - u and ^R
 - Toggle comment - Leader /
 - Horizontal terminal - Leader h (q to quit) Avoid using this terminal style. Use an actual terminal tab.
-- Toggle NVIM Tree - C-N
-- Change NVIM Tree directory - ; the cd <directory name> ENTER
+- Toggle NVIM Tree - C-n
 - Shortcut cheatsheet - Leader ch
 - Toggle relative numbers - Leader rn
 - Toggle line numbers - Leader n

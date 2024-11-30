@@ -241,6 +241,14 @@ return {
   -- LazyGit integration with Telescope
   {
     "kdheepak/lazygit.nvim",
+    lazy = false,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
     keys = {
       {
         ";c",
@@ -251,8 +259,12 @@ return {
     },
     -- optional for floating window border decoration
     dependencies = {
+      "nvim-telescope/telescope.nvim",
       "nvim-lua/plenary.nvim",
     },
+    config = function()
+      require("telescope").load_extension "lazygit"
+    end,
   },
 
   -- Filename
@@ -478,6 +490,7 @@ return {
       -- "stevearc/dressing.nvim",
     },
     keys = {
+
       {
         ";r",
         function()
@@ -497,6 +510,15 @@ return {
       --   end,
       --   desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       -- },
+
+      {
+        ";w",
+        function()
+          local builtin = require "telescope.builtin"
+          builtin.grep_string()
+        end,
+        desc = "Search for a word in your current working directory",
+      },
       {
         ";f",
         function()
@@ -553,8 +575,8 @@ return {
             hidden = true,
             grouped = true,
             previewer = false,
-            initial_mode = "normal",
-            layout_config = { height = 30 },
+            initial_mode = "insert",
+            layout_config = { height = 24 },
           }
         end,
         desc = "Open File Browser with the path of the current buffer",
