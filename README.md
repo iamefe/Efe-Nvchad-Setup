@@ -1,4 +1,4 @@
-# Notes
+# My NvChad Dotfiles
 
 ## For new Nvchad installation
 
