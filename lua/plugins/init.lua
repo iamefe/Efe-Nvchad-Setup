@@ -594,7 +594,7 @@ return {
         notify = {
           enable = false,
         },
-        prompt_prefix = "  ⌘  ",
+        prompt_prefix = " ⌘    ",
         layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",

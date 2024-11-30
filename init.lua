@@ -57,9 +57,13 @@ local function setup_file_browser()
   }
 end
 
--- Automatically call the setup function on VimEnter (i.e., when Neovim has finished loading).
+-- Automatically call the setup function on VimEnter, but only if no files or arguments are provided
 vim.api.nvim_create_autocmd("VimEnter", {
-  pattern = "*",
-  callback = setup_file_browser,
-  desc = "Open Telescope File Browser when Neovim starts",
+  callback = function()
+    -- Check if no files or arguments are given
+    if vim.fn.argc() == 0 then
+      setup_file_browser()
+    end
+  end,
+  desc = "Open Telescope File Browser when Neovim starts without arguments",
 })
