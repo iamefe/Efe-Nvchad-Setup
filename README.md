@@ -68,8 +68,8 @@ yarn global add prettier-plugin-svelte
 - Super powers - :Telescope
 - Using Telescope to see all keymaps - Leader km or :Telescope keymaps
 - Lazy - Leader l
-- Quit - Leader q
-- Close Nvim - Leader Q
+- Close out of NvChad (this prompt you to save unsaved files) - Leader q
+- Close out of NvChad (this discard all unsaved changes) - Leader Q
 - Close tab (buffer) - Leader X
 - IN YOUR FILE BROWSER
   - h to go to the parent directory (like going cd ../)
