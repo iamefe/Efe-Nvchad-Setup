@@ -92,11 +92,11 @@ return {
 
           -- custom mappings
           vim.keymap.set("n", "t", api.node.open.tab, opts "Tab")
-          vim.cmd [[
-              :hi NvimTreeNormal guibg=#011627,
-              :hi NvimTreeNormalFloat guibg=#011627,
-              :hi NvimTreeNormalNC guibg=#011627
-            ]]
+          -- vim.cmd [[
+          --     :hi NvimTreeNormal guibg=#011627,
+          --     :hi NvimTreeNormalFloat guibg=#011627,
+          --     :hi NvimTreeNormalNC guibg=#011627
+          --   ]]
         end,
 
         disable_netrw = true,
@@ -194,41 +194,10 @@ return {
     "stevearc/conform.nvim",
     event = "BufWritePre",
     config = function()
+      -- Import the configurations from the conform.lua file in the configs directory
       require "configs.conform"
-      --       require("conform").setup({
-      --
-      --         formatters_by_ft = {
-      --           lua = { "stylua" },
-      --           -- Conform will run multiple formatters sequentially
-      --           python = { "isort", "black" },
-      --           -- You can customize some of the format options for the filetype (:help conform.format)
-      --           rust = { "rustfmt", lsp_format = "fallback" },
-      --           -- Conform will run the first available formatter
-      --           javascript = { "prettierd", "prettier", stop_after_first = true },
-      --           typescript = { "prettierd", "prettier", stop_after_first = true },
-      --         },
-      -- format_on_save = {
-      --   -- These options will be passed to conform.format()
-      --   timeout_ms = 500,
-      --   lsp_format = "fallback",
-      -- },
-      --
-      --       vim.api.nvim_create_autocmd("BufWritePre", {
-      -- pattern = "*",
-      -- callback = function(args)
-      --   require("conform").format({ bufnr = args.buf })
-      -- end,
-      -- })
-      -- })
     end,
   },
-  -- {
-  --   "stevearc/conform.nvim",
-  --   event = "BufWritePre",
-  --   config = function()
-  --     require "configs.conform"
-  --   end,
-  -- },
 
   -- Incremental rename
   {
@@ -497,6 +466,7 @@ return {
   -- Telescope
   {
     "telescope.nvim",
+    lazy = false,
     priority = 1000,
     dependencies = {
       {

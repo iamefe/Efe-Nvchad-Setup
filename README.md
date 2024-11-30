@@ -44,6 +44,8 @@ yarn global add prettier-plugin-svelte
 
 ## POPULAR SHORTCUTS
 
+- Cut a line or delete a line - dd
+- Cut or delete a block - place your cursor at the start of the line and then press d(number of lines)ENTER
 - Go to import definition - gd
 - Move line up or down - alt + k or j
 - Duplicate line down - Leader d (n mode)
