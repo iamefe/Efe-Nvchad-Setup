@@ -52,7 +52,7 @@ local function setup_file_browser()
     hidden = true,
     grouped = true,
     previewer = false,
-    initial_mode = "insert",
+    initial_mode = "normal",
     layout_config = { height = 24 },
   }
 end

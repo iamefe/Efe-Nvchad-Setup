@@ -5,17 +5,6 @@
 -- You should also check for the current version or the version you are using. The example above is for v2.5
 return {
 
-  -- {
-  --   'MeanderingProgrammer/render-markdown.nvim',
-  --   dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-  --   -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-  --   -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-  --   ---@module 'render-markdown'
-  --   ---@type render.md.UserConfig
-  --   opts = {},
-  --   lazy = false,
-  -- };
-
   -- Search/replace in multiple files
   {
     "nvim-pack/nvim-spectre",
@@ -575,7 +564,7 @@ return {
             hidden = true,
             grouped = true,
             previewer = false,
-            initial_mode = "insert",
+            initial_mode = "normal",
             layout_config = { height = 24 },
           }
         end,

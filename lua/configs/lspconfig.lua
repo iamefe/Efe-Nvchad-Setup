@@ -64,6 +64,17 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
   filetypes = { "rust" },
   root_dir = lspconfig.util.root_pattern "Cargo.toml",
+
+  settings = {
+    ["rust_analyzer"] = {
+      diagnostics = {
+        enable = false,
+      },
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
 }
 
 -- lua
@@ -124,7 +135,7 @@ lspconfig.lua_ls.setup {
         unusedLocalExclude = { "_*" },
       },
       format = {
-        enable = false,
+        enable = true,
         defaultConfig = {
           indent_style = "space",
           indent_size = "2",

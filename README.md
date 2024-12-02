@@ -26,6 +26,16 @@ alias nvim='~/nvim-linux64/bin/nvim'
 
 ```
 
+## Shortcut to open a terminal with Nvim (PTYXIS terminal)
+
+Create a custom keyboard shortcut in your Fedora settings for Nvim and add the command below:
+
+```sh
+ptyxis --new-window --working-directory=/home/oserefemhen/work -- zsh -c "nvim"
+```
+
+Customize the command above to your heart's content.
+
 ## Language servers
 
 These are the specific configuration names for the servers you intend to use here:
@@ -44,6 +54,8 @@ yarn global add prettier-plugin-svelte
 
 ## POPULAR SHORTCUTS
 
+- [All mapping for the Telescope file browser.](https://github.com/nvim-telescope/telescope-file-browser.nvim?tab=readme-ov-file#mappings)
+- Change nvim's cwd to selected folder/file(parent) - `<C-w>/w` (Insert/normal)
 - Collapse all (Nvimtree) - `W`
 - Copy absolute path - `gy`
 - Up (Nvimtree) - `-`
